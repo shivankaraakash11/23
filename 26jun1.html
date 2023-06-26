@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style>
+
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    
+    <div>
+    	<h1>26 Jun 1</h1>
+    </div>
+
+     <script>
+        // function defination.
+        function myFunction(x,y){  // x and y are formal parameter/arguments
+            // function body
+
+            return x+y;
+            // function may return something
+        }
+
+        // function calling
+        let z =  myFunction(10,20); //  10 or 20 actual parameter/arguments
+        var a = myFunction(50,20);
+        console.log(z);
+        console.log(a);
+       // alert(a);  // Function Calling  
+        // alert is a pre defined function.
+        // myFunction is a user defined function
+
+        var b = myFunction(40,myFunction(50,20));
+        console.log(b);
+       // alert(b);
+
+       var students = ['anil',"avinash",'kiran',"abhishek"];
+       // console.log('Hello ' + students[0] + ' how are you?');
+      // alert('Hello ' + students[0] + ' how are you?');
+
+      // if you have many students so you can use function and Loops
+      
+      // 1. First Method..
+      function greet(studentName){
+        console.log('Hello ' + studentName + ' how are you?');
+      }
+      greet(students[0]);
+
+      /*
+        for(initialization;condition;increment/decrement){
+        }
+      */
+      for(var i=0;i<=3;i++){
+        greet(students[i]);
+      }
+
+      // 2. Second Method..
+      function greet1(student){
+        for(var i=0;i<=3;i++){
+            console.log('Second method - Hello ' + student[i] + ' how are you?');
+        }
+      }
+      greet1(students);
+    </script>
+
+
+</body>
+
+</html>
