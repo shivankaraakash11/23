@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>26 Jun 2023</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1>26 Jun 2023</h1>
+
+        <script>
+        // example using return keyword  
+
+            // Proper Naming Convetion ie function name are always in camelCase
+            function myFunctionA(){  // 1. Function Defination
+            console.log(x + y + z + a)  // Function Body
+            }
+
+            var x = "A";
+            var y = " Flower";
+            var z = " needs";
+            var a = " water.";
+
+            myFunctionA();  // 2. Function calling
+
+            function myFunctionB(){  // 1. Function Defination
+            console.log(a1 + b2 + c3) // Function Body
+            }
+            let a1 = 'Hii';
+            let b2 = ' Akash';
+            let c3 = ' How are you ?';
+
+            myFunctionB(); // 2. Function calling
+
+
+    // example using return keyword   
+
+            function myFunctionC(x,y){
+                return x+y;
+            }
+
+           let result = myFunctionC(10,10);
+           console.log(result);
+
+           // OR function ke ander function ko call krna.
+           let result1 = myFunctionC(10,myFunctionC(10,10));
+           console.log(result1);
+
+           function aF(){
+            return 10;
+           }
+
+           function bF(){
+            return 40;
+           }
+
+           function cF(x,y){
+            return x+y;
+           }
+
+           // Function as a argument
+           let zF = cF(aF(),bF());
+           console.log(zF);
+        </script>
+    </body>
+</html>
