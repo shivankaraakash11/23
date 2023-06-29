@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .a_box{
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        // function clickMe(argument){
+        //     //alert('hii');
+        //     // object.member.member.member
+        //     document.body.style.backgroundColor = 'yellow';
+        // }  
+
+        // function clickMe2(argument){
+        //     document.body.style.backgroundColor = 'black';
+        // }   
+
+        function clickMe(option){
+            if(option == 'On') {    // compartion operater
+                // object.member.member.member
+                document.body.style.backgroundColor = 'yellow';
+                document.getElementById('myimg').setAttribute('src','img/bulb4.png')
+            }
+            else{
+                // object.member.member.member
+                document.body.style.backgroundColor = 'black';
+                document.getElementById("myimg").setAttribute("src", "img/bulb2.png"); 
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="a_box">
+
+    	<h1 id="id1">Hii , Akash 28 Jun 2023</h1>
+        <img id="myimg" src="img/bulb2.png">
+        <!-- <img id="myimg" src="img/bulb1.jpg"> -->
+
+        <br>
+        <button onclick="clickMe('On')">On</button>
+        <button onclick="clickMe('Off')">Off</button>
+
+    </div>
+
+    
+    <script>
+                              
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style>
+
+    </style>
+    <script>
+        let x = {
+
+            /* member (object ke ander 2 member hote hai.)
+             1.property:Value
+             2.function / method 
+            */
+
+            name:"Akash",           // 1.property:Value
+            "surame":'shivankar',   // 1.property:Value
+
+            myFunA:function(){      // 2.function / method 
+
+                //console.log(this.); this = self = current object
+                console.log("My Name Is " +this.name);
+            },
+            myFunB:function(){     //myFunB:()=>{  this arrow function not working for this.
+                 console.log("My surname Is " +this.surame);
+            }
+        }; // x is a js object
+
+        console.log(x.name); // Bahar se hum yese bhi access kr skte hai lekin
+
+        console.log(x.myFunA()); // object function calling
+
+        console.log(x.myFunB()); // object function calling
+
+        let y = {
+            name:"akash",
+            address:"bhopal",
+            "friends":['A',"B","C",'D']
+        };
+    </script>
+</head>
+
+<body>
+    
+    <div>
+    	<h1 id="id1">Akash 28 Jun 2023</h1>
+    </div>
+
+     <script>
+        console.log(y);
+        let z = ['A',"B","C",'D'];
+
+        for(var i=0;i<z.length;i++){
+            console.log('hello good morning '+ z[i]);
+        }
+
+        z.forEach(element => {
+            console.log('hello good morning ' + element);
+            
+        });
+
+        
+        let teachers = ["AA","BB","CC"] ;   // for(singlualar of plural){
+                                            //     code block to be executed
+        for(teacher of teachers)            // }
+        {          
+            console.log(teacher);           // for(variable of iterable){
+        }                                   // console.log(teacher);
+                                            // }
+                                                   
+</script>
+
+<script>
+    
+    let myObject ={
+        AA:"hello AA",           // Property:value 
+        myFunC:function(){       // method / function
+           console.log(this.AA); 
+        },
+
+        BB:"hello BB",
+        myFunD:function(){
+            console.log(this.BB + " How are you")
+        }
+
+    };
+    myObject.myFunC();
+    myObject.myFunD();
+</script>
+</body>
+
+</html>

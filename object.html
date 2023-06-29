@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style></style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    
+    <div>
+    	<h1 id="id1">Hii , Akash 27 JUN 2023</h1>
+    </div>
+
+     <script>
+        /*{
+            property:value,
+            property:value,
+            functions
+        }*/
+        let student = {
+            'name':"Akash",
+            "surname":'Shivankar',
+            address:"Bhopal",
+            friends:['friend1','friend2','friend3'], // js object containing array.
+            teachers:[{
+                name:"Maam",
+                contact:"536556"
+            },{
+                name:"Maam1",
+                contact:"536556"
+            }], // Array of object.
+            sisters:{
+                name:"salomi",
+                contact:"1234556",
+                hobbies:"bedmintten"
+            }
+            
+        }; // JS Operator
+
+                    // Object.member
+        console.log(student.name);
+        console.log(student.friends[0]);
+
+        // Akash Have 3 Friends
+        console.log(student.name + " Have "+ student.friends.length +" Friends");
+        
+        // Akash Have 2 Teachers
+        console.log(student.name + " Have "+ student.teachers.length +" Teachers");
+        
+        for(var i=0;i<student.teachers.length;i++){
+            console.log(student.teachers[i].name+" Have Contact Number is "+ student.teachers[i].contact);
+        }
+        var x = ['Akash',student] // Array contain js object.
+
+    </script>
+
+
+</body>
+
+</html>

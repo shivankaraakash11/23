@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style>
+        div[data-akash="myfanbox"]{ /*attribute selecter*/
+            /*border: 1px solid red;*/
+        }
+        .FanBox{
+            width: 300px;
+            height: 300px;
+            background-image: url("img/fan2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 80px auto;
+            animation-name: fan;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+        @keyframes fan {
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(359deg);
+            }
+        }
+
+        .btngroup > button:first-child{
+            background-color: red;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+
+        .btngroup > button:second-child{
+            background-color: red;
+            border: none;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+
+    <!-- first tarika -->
+    <script>
+        // function defination 
+        // jab ek hi sentence repeat ho to function bna ke yesa kr skte hai
+        function x(elem){
+            return document.querySelector(elem);
+        }
+
+        function y(elem){
+            return document.getElementById(elem);
+        }
+
+        function startFan(speed) {  // speed is a formal aurgument 
+            // We have to check some condition
+            // if elseif else .... else ladder
+            if(speed == 0){
+                x('.FanBox').style.animationPlayState= 'paused';
+            } 
+            else if(speed ==1){
+                x('.FanBox').style.animationPlayState= 'running';
+                y('#fanboxx').style.animationDuration = '0.10s';
+            } 
+            else if(speed == 2){
+                x('[data-akash="myfanbox"]').style.animationPlayState= 'running';
+                x('[data-akash="myfanbox"]').style.animationDuration = '0.6s';
+            }
+            else{
+                y('fanboxx').style.animationPlayState= 'running';
+                y('fanboxx').style.animationDuration = '0.1s';
+            }
+        }
+    </script>
+
+    <!-- Second tarike -->
+
+    <!-- <script>
+        // function defination
+        function startFan(speed) {  // speed is a formal aurgument 
+            // We have to check some condition
+            // if elseif else .... else ladder
+            if(speed == 0){
+                document.querySelector('.FanBox').style.animationPlayState= 'paused';
+            } 
+            else if(speed ==1){
+                document.querySelector('.FanBox').style.animationPlayState= 'running';
+                document.getElementById('#fanboxx').style.animationDuration = '0.10s';
+            } 
+            else if(speed == 2){
+                document.querySelector('[data-akash="myfanbox"]').style.animationPlayState= 'running';
+                document.getElementById('[data-akash="myfanbox"]').style.animationDuration = '0.6s';
+            }
+            else{
+                document.getElementById('fanboxx').style.animationPlayState= 'running';
+                document.getElementById('fanboxx').style.animationDuration = '0.1s';
+            }
+        }
+    </script> -->
+</head>
+
+<body>
+    <h1 id="id1">Hii , Akash 29 Jun 2023<br>
+    Do tarike se hum ye animation kr skte hai.</h1>
+
+    <div class="FanBox" id="fanboxx" data-akash="myfanbox">
+    	<!-- Hum khud se attribute bna skte hai uske liye hume (data-) se start krna hai. example data-akash="myfanbox" -->
+    </div>
+
+    <div style="text-align: center;" class="btngroup">
+        <button onclick="startFan(0)">stop</button>
+        <button onclick="startFan(1)">1</button>
+        <button onclick="startFan(2)">2</button>
+        <button onclick="startFan(3)">3</button>
+    </div>
+    
+
+     <script>
+    
+    </script>
+</body>
+
+</html/>
