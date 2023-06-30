@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Html</title>
+    <style>
+    </style>
+
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <h1 id="id1"> 30 Jun 2023 (How to access from element with javascript.)</h1>
+    
+    <form onsubmit="return SubmitForm()">
+        <input id="akash" type="text" name="number1" placeholder="Enter a number1">
+        <input data-akash="number2" id="number2" type="text" name="number2" placeholder="Enter a number2">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        // Always load js at the bottom to apear your website is loading fast.
+
+        // function defination
+        function SubmitForm(){  // formal paerameter/aurgument
+            // function body
+            
+           let num1 = document.getElementById('akash').value;
+           var num2 = document.querySelector('[data-akash="number2"]').value;
+           let total = parseInt(num1) + parseInt(num2);
+
+           // object.method();
+           localStorage.setItem('result',total); //object.method(); we are passing two argument are sting argument.
+           // a function return something.
+           return false;
+        }
+    </script>
+</body>
+
+</html>
